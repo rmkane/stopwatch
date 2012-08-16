@@ -29,6 +29,7 @@ body {
 	font-size:4em;
 	text-align:center;
 	width:280px;
+	height:64px;
 	margin:0 auto;
 	margin-bottom:20px;
 }
@@ -36,6 +37,8 @@ body {
 form {
 	margin:0 auto;
 	width:280px;
+	height:80px;
+	background:green;
 }
 
 input[type="button"] {
@@ -48,8 +51,15 @@ input[type="button"] {
 	margin:0 5.25px;
 }
 
+#split {
+	margin:0 auto;
+	width:80%;
+	height:100%;
+	background:red;
+}
+
 footer {
 	font-size:smaller;
 	text-align:center;
-	margin-top:50%;
+	display:block;
 }

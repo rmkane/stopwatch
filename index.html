@@ -7,9 +7,10 @@
   <body>
     <script rel="stylsheet" type="text/javascript" src="js/script.js"></script>
     <form>
-      <input type="button" value="Start" onclick="fstart()">
-			<input type="button" value="Stop" onclick="fstop()">
-			<input type="button" value="Reset" onclick="freset()">
+      <input id="start_stop_btn" type="button" value="Start" onclick="start_stop()" />
+			<input id="reset_time_btn" type="button" value="Reset" onclick="reset_time()" />
+			<input id="split_time_btn" type="button" value="Split" onclick="split_time()"/ >
+			<textarea id="split"></textarea>
     </form>
 		<footer>
 			Copyright &copy; 2012 | Ryan M Kane
