@@ -52,7 +52,7 @@ input[type="button"] {
 	color:#44a;
 	width:80px;
 	height:36px;
-	font-size:18px;
+	font-size:16px;
 	font-weight:bold;
 	margin:10px 0px;
 	text-align:center;
@@ -67,6 +67,7 @@ textarea#split_time_ara {
 	background:#ccf;
 	resize:none;
 	border:none;
+	font-family:monospace;
 }
 
 span.spacer {

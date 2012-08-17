@@ -118,14 +118,14 @@ function reset_time() {
 		counter(reset_time);
 	} else {
 		display.value = "00:00.000";
-		split_time_ara.value = "";
-		split_count = 0;
 	}
+	split_time_ara.value = "";
+	split_count = 0;
 }
 
 // Capture a time and add to running list
 function split_time() {
 	if (running == 1) {
-		split_time_ara.value += (++split_count) + ". " + display.value + "\n";
+		split_time_ara.value += (split_count < 9 ? '0' : '') + (++split_count) + ". " + display.value + "\n";
 	}
 }
