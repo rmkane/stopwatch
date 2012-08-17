@@ -34,10 +34,19 @@ function init() {
 	split_time_ara.setAttribute("id", "split_time_ara");
 	split_time_ara.setAttribute("onFocus", "blur()");
 
+	// Spacers for horizontal span between buttons
+	var spacer1= document.createElement("span");
+	spacer1.setAttribute("class", "spacer");
+	var spacer2= document.createElement("span");
+	spacer2.setAttribute("class", "spacer");
+
+
 	// Add the components to the stopwatch and add to the body
 	stopwatch.appendChild(display);
 	stopwatch.appendChild(start_stop_btn);
+	stopwatch.appendChild(spacer1);
 	stopwatch.appendChild(reset_time_btn);
+stopwatch.appendChild(spacer2);
 	stopwatch.appendChild(split_time_btn);
 	stopwatch.appendChild(split_time_ara);
 	document.body.appendChild(stopwatch);
