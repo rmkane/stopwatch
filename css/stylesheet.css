@@ -1,8 +1,11 @@
+/* Reset all margins and padding */
 * {
 	margin:0;
 	padding:0;
+	outline: none;
 }
 
+/* Import custom Digital clock font */
 @font-face {
     font-family:"Digital";
     src: url(../font/Digital.ttf);
@@ -19,10 +22,19 @@ body {
 	margin:0 auto;
 	background:#a8a8a8;
 	margin:0 auto;
-	padding:20px;
 }
 
-#display {
+/* Stopwatch form element */
+form#stopwatch {
+	margin:0 auto;
+	padding:20px;
+	width:280px;
+	height:316px;
+	background:inherit;
+}
+
+/* Display text input element */
+input[type="text"]#display {
 	background:#000;
 	font-family:"Digital", monospace;	
 	color:#080;
@@ -31,16 +43,10 @@ body {
 	width:280px;
 	height:64px;
 	margin:0 auto;
-	margin-bottom:20px;
+	border:none;
 }
 
-form {
-	margin:0 auto;
-	width:280px;
-	height:80px;
-	background:green;
-}
-
+/* Stopwatch input buttons */
 input[type="button"] {
   background:#ddd;
 	color:#44a;
@@ -48,18 +54,15 @@ input[type="button"] {
 	height:2em;
 	font-size:1.5em;
 	font-weight:bold;
-	margin:0 5.25px;
+	margin:10px 5px;
 }
 
-#split {
+/* Split time text area */
+textarea#split_time_ara {
 	margin:0 auto;
-	width:80%;
-	height:100%;
-	background:red;
-}
-
-footer {
-	font-size:smaller;
-	text-align:center;
-	display:block;
+	width:100%;
+	height:180px;
+	background:#ccf;
+	resize:none;
+	border:none;
 }

@@ -1,0 +1,17 @@
+<NotepadPlus>
+    <Project name="stopwatch">
+        <Folder name="css">
+            <File name="css\stylesheet.css" />
+        </Folder>
+        <Folder name="font">
+            <File name="font\Digital.ttf" />
+        </Folder>
+        <Folder name="img" />
+        <Folder name="js">
+            <File name="js\script.js" />
+        </Folder>
+        <File name="index.html" />
+        <File name="README.md" />
+        <File name="pom.xml" />
+    </Project>
+</NotepadPlus>
