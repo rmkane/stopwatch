@@ -37,7 +37,7 @@ form#stopwatch {
 input[type="text"]#display {
 	background:#000;
 	font-family:"Digital", monospace;	
-	color:#080;
+	color:#0a0;
 	font-size:4em;
 	text-align:center;
 	width:280px;

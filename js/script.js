@@ -32,7 +32,6 @@ function init() {
 	// Split time results
 	var split_time_ara = document.createElement("textarea");
 	split_time_ara.setAttribute("id", "split_time_ara");
-	split_time_ara.setAttribute("value", "hello");
 	split_time_ara.setAttribute("onFocus", "blur()");
 
 	// Add the components to the stopwatch and add to the body
