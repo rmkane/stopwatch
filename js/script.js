@@ -5,6 +5,7 @@ var stop_time = 0;
 var current_time;
 var refresh = 0;
 var split_count = 0;
+var split_arr = new Array();
 
 // Set up the stopwatch
 function init() {
@@ -18,7 +19,7 @@ function init() {
 	display.setAttribute("id", "display");
 	display.setAttribute("type", "text");
 	display.setAttribute("onFocus", "blur()");
-	display.value = "00:00.000";
+	display.value = "STOPWATCH";
 
 	// Start/Stop button
 	var start_stop_btn = createEle("input", "start_stop_btn", "button", "Start", "start_stop()");
@@ -99,7 +100,7 @@ function counter(start_time) {
 
 // Format the display time
 function format_time(time) {
-	var m = Math.floor(time / 60000);
+	var m = Math.floor(time / 60000) % 60;
 	var s = Math.floor(time / 1000) % 60;
 	var ms = time % 1000;
 	return	(m < 10 ? '0' + m : m) + ':' +
@@ -120,12 +121,31 @@ function reset_time() {
 		display.value = "00:00.000";
 	}
 	split_time_ara.value = "";
+	split_arr = new Array();
 	split_count = 0;
 }
 
 // Capture a time and add to running list
 function split_time() {
 	if (running == 1) {
-		split_time_ara.value += (split_count < 9 ? '0' : '') + (++split_count) + ". " + display.value + "\n";
+		split_arr[split_count] = display.value;
+		var split_diff = 0;
+		if (split_count > 0) {
+			var split1 = timeToMs( split_arr[split_count - 1] );
+			var split2 = timeToMs( split_arr[split_count] );
+			var diff = parseInt(split2 - split1)
+			var split_diff = format_time(diff);
+		}
+		
+		split_time_ara.value += (split_count < 9 ? '0' : '') + (split_count+1) + '. ' + split_arr[split_count] + 
+		  (split_count > 0 ? '\t+ ' + split_diff : '') + '\n';
+		split_count++;
 	}
+}
+
+// Converts a string of time to milliseconds
+function timeToMs(time) {
+	return (parseInt(time.substring(0, 2)) * 60000) +
+						 (parseInt(time.substring(3, 5)) * 1000) +
+						 (parseInt(time.substring(6, 9)) * 1);
 }
